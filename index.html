@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="printButton">Print "I am awesome!"</button>
+    
+    <div id="output"></div>
+    
+    <script>
+        const btnPrint = document.querySelector('#printButton');
+        const outputDiv = document.querySelector('#output');
+
+        btnPrint.addEventListener('click', () => {
+            for (let i = 0; i < 10; i++) {
+                const sentence = document.createElement('p');
+                sentence.textContent = "I am awesome!";
+                outputDiv.appendChild(sentence);
+            }
+        });
+    </script>
+</body>
+</html>
